@@ -164,6 +164,7 @@ body {
 /*.container-2{
     padding:20px 105px;
 }
+
 .container-2o {
     max-width: 200px;
     box-shadow: rgba(0, 0, 0, 0.1);
@@ -180,6 +181,7 @@ body {
     gap:15px;
     justify-content: center;
 }
+
 .dropdown{
     display: flex;
     flex-direction: column;
@@ -203,7 +205,6 @@ body {
   z-index: 10;
   padding: 20px;
   box-sizing: border-box;
-
 }
 
 /*.toggle-wrapper {
@@ -218,7 +219,6 @@ body {
   border-radius: 4px;
   cursor: pointer;
   position: relative;
-
 }
 
 .toggle-wrapper {
@@ -227,7 +227,6 @@ body {
   left: 50%;
   transform: translate(-50%, -100%);
   z-index: 11;
-
 }
 
 .toggle-btn.active {
@@ -470,6 +469,10 @@ body {
   font-size: 20px;
   max-width: 60%;
   text-align: center;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
 
@@ -477,6 +480,8 @@ body {
   color: #1E2640;
   font-weight: 600;
   font-size: 40px;
+  line-height: 48px;
+  margin:0;
 
 }
 
@@ -486,6 +491,13 @@ body {
   align-items: space-between;
   gap: 15px;
   justify-content: center;
+}
+
+.pandg{
+  display: flex;
+  flex-direction: column;
+  gap:35px;
+  align-items: center;
 }
 
 .groups .group-1:hover {
@@ -777,6 +789,9 @@ body {
   flex-direction: row;
   gap: 8px;
 }
+ .house p{
+  margin:0;
+ }
 
 .bighead h1 {
   font-size: 24px;
@@ -1014,7 +1029,56 @@ swiper-container.mySwiper{
     }
 
 
+/* Base layout */
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+  position: relative;
+}
 
+.logo {
+  max-height: 50px;
+}
+
+.nav-class {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-class nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-class nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-class button {
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hamburger hidden by default */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
 
 @media (max-width: 1024px) {
   .hamburger {
@@ -1030,7 +1094,7 @@ swiper-container.mySwiper{
     padding: 20px;
     flex-direction: column;
     align-items: flex-start;
-    display: none;
+    display:none;
     width: max-content;
     z-index: 999;
   }
@@ -1080,7 +1144,62 @@ swiper-container.mySwiper{
   .container-7 {
     padding: 100px 30px;
   }
+.groups{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card.wide {
+  grid-column:unset;
+}
+.bottom-section .nav-class{
+  display: none;
+}
+  .hamburger {
+    display: block;
+    z-index: 1001;
+  }
 
+  .nav-class {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: max-content;
+    z-index: 1000;
+  }
+
+  .nav-class nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-class nav a {
+    color: grey;
+  }
+
+  .nav-class button {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #4A60A1;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+
+  /* Show nav when checkbox is checked */
+  .menu-toggle:checked + .hamburger + .nav-class {
+    display: flex;
+  }
 
 }
 
@@ -1105,6 +1224,7 @@ swiper-container.mySwiper{
     left: auto;
     transform: none;
     width: 90%;
+    margin: 0 auto;
     padding: 20px 15px;
     border-radius: 10px;
   }
@@ -1135,6 +1255,9 @@ swiper-container.mySwiper{
     flex-direction: column;
     padding: 50px 30px;
     gap: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .sctn7 {
@@ -1142,7 +1265,16 @@ swiper-container.mySwiper{
     align-items: flex-start;
     gap: 24px;
   }
-
+.sctn7a{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.email{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
   .house {
     flex-direction: row;
     align-items: center;
@@ -1156,6 +1288,14 @@ swiper-container.mySwiper{
   .company,
   .policy {
     width: 100%;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1);
+  }
+  .groups{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
@@ -1184,13 +1324,13 @@ swiper-container.mySwiper{
 
   .search-container {
     flex-wrap: wrap;
-    /* fallback */
+    
     justify-content: center;
   }
 
   .search-container hr {
     display: none;
-    /* cleaner layout */
+    
   }
 
   .container-7 {
@@ -1224,6 +1364,23 @@ swiper-container.mySwiper{
     font-size: 14px;
   }
 
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .search-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+.top-section nav{
+  display: none;
+}
+hr{
+  display: none;
+}
 
+.head1 p{
+  max-width: 70%;
+}
 
 }
