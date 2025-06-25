@@ -63,8 +63,7 @@
                 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales
                     ultrices nulla blandit volutpat.</p>
             </div>
-        </div>
-        <div class="container-float">
+            <div class="container-float">
             <div class="toggle-wrapper">
                 <button class="toggle-btn active">Rent</button>
                 <button class="toggle-btn">Sale</button>
@@ -94,6 +93,8 @@
                 <button class="search-button">Search</button>
             </div>
         </div>
+        </div>
+        
     </div>
     
     <div class="container-2">
@@ -479,15 +480,16 @@
     }
 
     .slide-box {
-      width: 220px;           /* Reduced width */
-      height: 300px;          /* Reduced height */
-      border-radius: 4px;
+      width: 100%;           /* Reduced width */
+      height: 100%;          /* Reduced height */
+      border-radius: 6px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       background: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
+      object-fit: cover;
     }
 
     .slide-box img {
@@ -553,11 +555,7 @@
         </div>
       </swiper-slide>
 
-      <swiper-slide>
-        <div class="slide-box">
-          <img src="images/Group 11.png" alt="" />
-        </div>
-      </swiper-slide>
+      
     </swiper-container>
 
     <!-- Navigation Buttons -->
