@@ -756,14 +756,8 @@ body {
   align-items: center;
   gap: 10px;
 }
-
-
-.container-6 p {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
+.paragraph p{
   max-width: 90%;
-  margin: 0;
 }
 
 .container-6 button {
@@ -1388,9 +1382,7 @@ swiper-container.mySwiper{
 .top-section nav{
   display: none;
 }
-hr{
-  display: none;
-}
+
 
 .head1 p{
   max-width: 70%;

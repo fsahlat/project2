@@ -451,6 +451,21 @@ body {
   display: flex;
   gap: 8px;
 }
+.house {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  color: #4A60A1;
+}
+
+ .house p{
+  margin:0;
+  
+ }
+ .house {
+    flex-direction: row;
+    align-items: center;
+  }
 
 .bighead h1 {
   font-size: 24px;
@@ -603,7 +618,10 @@ body {
   cursor: pointer;
   border-radius: 5px;
 }
+.bighead h1 {
+  color: #4A60A1;
 
+}
 @media screen and (max-width: 1024px) {
 
 
@@ -762,9 +780,7 @@ body {
     display: none;
   }
 
-  hr {
-    display: none;
-  }
+
 .container-1{
   display: flex;
   flex-direction: column-reverse;
