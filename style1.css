@@ -755,7 +755,7 @@ body {
   .container-1,
   .main,
   .container-7 {
-    padding: 40px 80px;
+    padding: 40px 60px;
   }
 
   .nav-bar nav a {
@@ -765,5 +765,11 @@ body {
   hr {
     display: none;
   }
+.container-1{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: space-between;
+  gap:20px;
 
+}
 }
