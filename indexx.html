@@ -30,24 +30,29 @@
             </div>
         </div>
     </div>
-    <div class="header2">
-        <img src="images/logo (5).png" alt="" />
+  <div class="header2">
+  <img src="images/logo (5).png" alt="Logo" class="logo" />
 
-        <!-- Hamburger Button -->
-        <button class="hamburger">&#9776;</button>
+  <!-- Hidden checkbox to toggle menu -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
 
-        <!-- Navigation Links -->
-        <nav class="nav-links">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">OUR AGENT</a>
-            <a href="#">PROPERTIES</a>
-            <a href="#">GALLERY</a>
-            <a href="#">BLOG</a>
-            <a href="#">CONTACT US</a>
-            <a href="#">SEARCH</a>
-        </nav>
-    </div>
+  <!-- Navigation links -->
+  <div class="nav-links">
+    <nav>
+        <a href="./index.html">
+      <a href="#">HOME</a>
+      </a>
+      <a href="#">ABOUT US</a>
+      <a href="#">OUR AGENT</a>
+      <a href="#">PROPERTIES</a>
+      <a href="#">GALLERY</a>
+      <a href="#">BLOG</a>
+      <a href="#">CONTACT US</a>
+      <a href="#">SEARCH</a>
+    </nav>
+  </div>
+</div>
     <div class="hero">
         <div class="paragraph">
             <h1>
@@ -136,7 +141,9 @@
                         <hr />
                         <img src="images/Frame 88 (1).png" alt="" />
                         <hr />
-                        <img src="images/Frame 89 (2).png" alt="" />
+                        <div class="new">
+                        <img src="images/ArrowsOut (2).png" alt="" /><span>2,096.00 ft</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,7 +198,9 @@
                         <hr />
                         <img src="images/Frame 88 (1).png" alt="" />
                         <hr />
-                        <img src="images/Frame 89 (2).png" alt="" />
+                        <div class="new">
+                        <img src="images/ArrowsOut (2).png" alt="" /><span>2,096.00 ft</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -246,7 +255,9 @@
                         <hr />
                         <img src="images/Frame 88 (1).png" alt="" />
                         <hr />
-                        <img src="images/Frame 89 (2).png" alt="" />
+                        <div class="new">
+                        <img src="images/ArrowsOut (2).png" alt="" /><span>2,096.00 ft</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -256,7 +267,7 @@
             <button class="page active">1</button>
             <button class="page">2</button>
             <button class="page">3</button>
-            <span class="dots">. . .</span>
+             <button class="page">...</button>
             <button class="page">54</button>
             <button class="page next active">&rarr;</button>
         </div>
@@ -279,7 +290,9 @@
                 <h1>Contact Us</h1>
                 <div class="calls">
                     <div class="call">
+                        <div class="number">
                         <p>Call : +123 400 12</p>
+                        </div>
                         <p>
                             Praesent nulla massa, hendrerit<br />
                             vestibulum gravida in, feugiat auctor feli
@@ -329,5 +342,7 @@
     </div>
 
 </body>
-
+<script>
+    
+</script>
 </html>

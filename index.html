@@ -58,6 +58,7 @@
                 </div>
             </div>
             <div class="head1">
+                
                 <h1>Find Your Dream Home</h1>
                 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales
                     ultrices nulla blandit volutpat.</p>
@@ -94,6 +95,7 @@
             </div>
         </div>
     </div>
+    <div class="float-spacer"></div>
     <div class="container-2">
         <h1>Properties by Area</h1>
         <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales
@@ -434,80 +436,180 @@
 
 
 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letest Properties of Rent</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script>
-        const swiperEl = document.querySelector('.mySwiper', {
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
 
-        Object.assign(swiperEl, {
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
-                },
-            },
-        });
+    .section-8-down {
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-        // After assigning options, you must initialize it
-        swiperEl.initialize();
-        setTimeout(() => {
-            const swiper = swiperEl.swiper;
+    .section-8-down h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
 
-            document.getElementById('prevBtn').addEventListener('click', () => {
-                swiper.slidePrev();
-            });
+    .section-8-down p {
+      color: #555;
+      margin-bottom: 30px;
+    }
 
-            document.getElementById('nextBtn').addEventListener('click', () => {
-                swiper.slideNext();
-            });
-        }, 100); 
-    </script>
-    <script>
-        function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("show");
-        }
-    </script>
-    <div class="section-8-down" style='margin-top:50px;'>
+    swiper-container {
+      width: 100%;
+    }
 
-        <swiper-container class="mySwiper" slides-per-view="4" space-between="20" centered-slides="true">
-            <swiper-slide><img src="images/c9f7818356664b9ec0231af50bfdcedbf9172101 copy.jpg"></swiper-slide>
-            <swiper-slide><img src="images/7506fcabe10d0c129950437e470131683741415c.jpg"></swiper-slide>
-            <swiper-slide><img src="images/c1b84915fef265f827f4d81f4dc08225e45af15b.jpg"></swiper-slide>
-            <swiper-slide><img src="images/9416dc5628ff3450fe625293d5d929013231c927.jpg"></swiper-slide>
-            <swiper-slide><img src="images/0ca733a4348361da5a46701851fdb2164d98911c.jpg"></swiper-slide>
-            <swiper-slide><img src="images/c9f7818356664b9ec0231af50bfdcedbf9172101 copy.jpg"></swiper-slide>
-            <swiper-slide><img src="images/7506fcabe10d0c129950437e470131683741415c.jpg"></swiper-slide>
-            <swiper-slide><img src="images/c1b84915fef265f827f4d81f4dc08225e45af15b.jpg"></swiper-slide>
-            <swiper-slide><img src="images/9416dc5628ff3450fe625293d5d929013231c927.jpg"></swiper-slide>
+    swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        </swiper-container>
-        <div class="custom-buttons">
-            <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
-            <button id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+    .slide-box {
+      width: 220px;           /* Reduced width */
+      height: 300px;          /* Reduced height */
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .custom-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .custom-buttons button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color:#B7BFD9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: 0.2s ease;
+    }
+
+    .custom-buttons button:hover {
+      background-color:#4A60A1; /* Slightly darker on hover */
+    }
+   
+  </style>
+</head>
+<body>
+
+  <div class="section-8-down">
+    <h1>Letest Properties of Rent</h1>
+    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat.</p>
+
+    <!-- Swiper Container -->
+    <swiper-container class="mySwiper" loop="true" centered-slides="true">
+      <swiper-slide>
+        <div class="slide-box">
+          <img src="images/Group 7.png" alt="" />
         </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="slide-box">
+          <img src="images/Group 8.png" alt="" />
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="slide-box">
+          <img src="images/Group 9.png" alt="" />
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="slide-box">
+          <img src="images/Group 10.png" alt="" />
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="slide-box">
+          <img src="images/Group 11.png" alt="" />
+        </div>
+      </swiper-slide>
+    </swiper-container>
+
+    <!-- Navigation Buttons -->
+    <div class="custom-buttons">
+      <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
+      <button id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
+  </div>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
+  <script>
+    const swiperEl = document.querySelector('.mySwiper');
 
+    Object.assign(swiperEl, {
+      loop: true,
+      centeredSlides: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
 
+    swiperEl.initialize();
+
+    setTimeout(() => {
+      const swiper = swiperEl.swiper;
+      document.getElementById('prevBtn').addEventListener('click', () => swiper.slidePrev());
+      document.getElementById('nextBtn').addEventListener('click', () => swiper.slideNext());
+    }, 100);
+  </script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
 
     <div class="container-6">
         <div class="paragraph">
@@ -536,7 +638,9 @@
                 <h1>Contact Us</h1>
                 <div class="calls">
                     <div class="call">
+                        <div class="number">
                         <p>Call : +123 400 12</p>
+                        </div>
                         <p>
                             Praesent nulla massa, hendrerit<br />
                             vestibulum gravida in, feugiat auctor feli

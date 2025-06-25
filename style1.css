@@ -67,6 +67,14 @@ body {
   gap: 5px;
 }
 
+.phone p {
+  color: white;
+}
+
+.number {
+  color: white;
+}
+
 .header2 {
   display: flex;
   justify-content: space-between;
@@ -75,13 +83,15 @@ body {
   align-items: center;
   position: relative;
 }
-.humburger{
+
+.humburger {
   font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
   display: none;
 }
+
 .header2 nav {
   display: flex;
   align-items: center;
@@ -222,7 +232,19 @@ body {
   width: 100%;
 }
 
+.new {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #4A60A1;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
 
+}
 
 .avatar {
   width: 40px;
@@ -289,12 +311,14 @@ body {
 .house-img {
   width: 100%;
   border-radius: 10px;
-  
+
 
 }
-.image-wrapper{
+
+.image-wrapper {
   height: 100%;
 }
+
 .labell {
   display: flex;
   gap: 10px;
@@ -302,8 +326,8 @@ body {
   border-radius: 4px;
   position: absolute;
   background-color: white;
-  z-index: 15; 
-  
+  z-index: 15;
+
   /* position: absolute;
   bottom: 10px;
   right: 10px;
@@ -389,7 +413,7 @@ body {
 }
 
 .page:hover {
-  background-color:#2d2dff;
+  background-color: #2d2dff;
   color: #FFFFFF;
 }
 
@@ -405,8 +429,8 @@ body {
   font-size: 18px;
 }
 
-.line{
-  width:85%;
+.line {
+  width: 85%;
 }
 
 /* Footer Section */
@@ -498,30 +522,92 @@ body {
   color: rgba(109, 115, 122, 1);
 }
 
+/* Nav links visible by default on large screens */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: grey;
+  font-size: 16px;
+}
+
+/* Base style */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links button {
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hamburger hidden by default */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+}
+
+/* Show navbar normally in big screens */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links nav a {
+  text-decoration: none;
+  color: #0F1320;
+  font-weight: 400;
+}
+
+.nav-links nav a:hover {
+  font-weight: 600;
+}
+
+.nav-links button {
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 1024px) {
-  .hamburger {
-    display: block;
-  }
 
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 40px;
-    background: white;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-    z-index: 100;
-  }
 
-  .nav-links.active {
-    display: flex;
-  }
-
-   .container-7 {
+  .container-7 {
     flex-direction: column;
     align-items: center;
     padding: 60px 40px;
@@ -545,10 +631,59 @@ body {
     padding: 12px;
   }
 
-  .section-1, .section-2, .section-3{
+  .section-1,
+  .section-2,
+  .section-3 {
     display: flex;
     flex-direction: column;
   }
+
+
+
+  .hamburger {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: max-content;
+    z-index: 1000;
+    align-items: flex-start;
+  }
+
+  .nav-links nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links nav a {
+    color: grey;
+  }
+
+  .nav-links button {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #4A60A1;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+
+  /* ✅ Show nav when checkbox is checked */
+  .menu-toggle:checked+.hamburger+.nav-links {
+    display: flex;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -575,7 +710,7 @@ body {
     font-size: 15px;
   }
 
-   .labell img {
+  .labell img {
     width: 40px;
   }
 
@@ -616,6 +751,19 @@ body {
   .logos div {
     padding: 8px;
   }
+
+  .container-1,
+  .main,
+  .container-7 {
+    padding: 40px 80px;
+  }
+
+  .nav-bar nav a {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+
 }
-
-
