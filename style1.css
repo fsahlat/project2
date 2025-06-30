@@ -621,6 +621,10 @@ body {
 .bighead h1 {
   color: #4A60A1;
 
+  .pagination {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
 }
 @media screen and (max-width: 1024px) {
 
@@ -799,7 +803,7 @@ bottom:10%;
   .container-1,
   .main,
   .container-7 {
-    padding: 40px 60px;
+    padding: 40px 20px;
   }
 
   .nav-bar nav a {
@@ -813,5 +817,62 @@ bottom:10%;
   align-items: space-between;
   gap:20px;
 
+  .pagination {
+    gap: 8px;
+  }
+
+  .page {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .page.next {
+    font-size: 16px;
+  }
+
+  .dots {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+}
+/* .phone{
+  width:max-content;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+} */
+ .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.page {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-size: 25px;
+  color: #4A60A1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-shrink: 1;
+}
+
+.page.next {
+  font-size: 25px;
+}
+
+.dots {
+  padding: 4px 6px;
+  font-size: 12px;
+  color: #555;
 }
 }
